@@ -7,7 +7,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v2
     - name: Setup .NET Core
@@ -18,8 +17,12 @@ jobs:
       run: dotnet restore
     - name: Build
       run: dotnet build --configuration Release --no-restore
+    - name: Run ls
+      run: ls 
     - name: Pack with dotnet
       run: dotnet pack ./Narojay.Tools.Core.csproj --output nuget-packages --configuration Release
+    - name: Run ls
+      run: ls 
     - name: Push with dotnet
       run: dotnet nuget push ./nuget-packages/*.nupkg --api-key ${{ secrets.NUGET_KEY }} --source https://api.nuget.org/v3/index.json
 

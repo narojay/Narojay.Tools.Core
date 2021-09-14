@@ -20,8 +20,8 @@ jobs:
       run: dotnet build --configuration Release --no-restore
     - name: aals
       run: ls
-    - name: Publish FluentEmail.Core
+    - name: Narojay.Tools.Core
       uses: brandedoutcast/publish-nuget@v2.5.2
       with:
-          PROJECT_FILE_PATH: ./Narojay.Tools.Core.csproj
+          PROJECT_FILE_PATH: ./
           NUGET_KEY: ${{secrets.NUGET_KEY}}

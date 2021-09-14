@@ -18,7 +18,7 @@ jobs:
     - name: Run ls
       run: ls 
     - name: Pack with dotnet
-      run: dotnet pack /home/runner/.dotnet/Narojay.Tools.Core/Narojay.Tools.Core.csproj --output nuget-packages --configuration Release
+      run: dotnet pack /home/runner/work/Narojay.Tools.Core/Narojay.Tools.Core/Narojay.Tools.Core.csproj --output nuget-packages --configuration Release
     - name: Run ls
       run: ls 
     - name: Push with dotnet

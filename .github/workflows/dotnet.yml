@@ -19,7 +19,7 @@ jobs:
     - name: Build
       run: dotnet build --configuration Release --no-restore
     - name: Narojay.Tools.Core
-      uses: brandedoutcast/publish-nuget@v2.5.2
+      uses: brandedoutcast/publish-nuget@v2.5.5
       with:
           PROJECT_FILE_PATH: ./Narojay.Tools.Core.csproj
           NUGET_KEY: ${{secrets.NUGET_KEY}}

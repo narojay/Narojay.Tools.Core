@@ -1,0 +1,27 @@
+name: Publish Packages
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 5.0.x
+    - name: Install dependencies
+      run: dotnet restore
+    - name: Build
+      run: dotnet build --configuration Release --no-restore
+    - name aals
+      run: ls
+#     - name: Publish nuget
+#       uses: brandedoutcast/publish-nuget@v2.5.2
+#       with:
+#           PROJECT_FILE_PATH: src/FluentEmail.Core/FluentEmail.Core.csproj
+#           NUGET_KEY: ${{secrets.NUGET_API_KEY}}

@@ -18,11 +18,8 @@ jobs:
       run: dotnet restore
     - name: Build
       run: dotnet build --configuration Release --no-restore
-      
-    - name: publish nuget package
-      uses: dansiegel/publish-nuget@2
-      with:
-       filename: '*.nupkg'
-       apiKey: ${{secrets.NUGET_KEY}}
-       feedUrl: 'https://api.nuget.org/v3/index.json'
+    - name: Pack with dotnet
+      run: dotnet pack Narojay.Tools.Core.csproj --output nuget-packages --configuration Release
+    - name: Push with dotnet
+      run: dotnet nuget push nuget-packages/*.nupkg --api-key ${{ secrets.NUGET_KEY }} --source https://api.nuget.org/v3/index.json
 

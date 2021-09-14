@@ -18,8 +18,6 @@ jobs:
       run: dotnet restore
     - name: Build
       run: dotnet build --configuration Release --no-restore
-    - name: aals
-      run: ls
     - name: Narojay.Tools.Core
       uses: brandedoutcast/publish-nuget@v2.5.2
       with:

@@ -21,5 +21,5 @@ jobs:
     - name: Narojay.Tools.Core
       uses: brandedoutcast/publish-nuget@v2.5.5
       with:
-          PROJECT_FILE_PATH: ./Narojay.Tools.Core.csproj
+          PROJECT_FILE_PATH: ../Narojay.Tools.Core.csproj
           NUGET_KEY: ${{secrets.NUGET_KEY}}

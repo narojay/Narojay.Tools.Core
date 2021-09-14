@@ -18,8 +18,11 @@ jobs:
       run: dotnet restore
     - name: Build
       run: dotnet build --configuration Release --no-restore
-    - name: Narojay.Tools.Core
-      uses: brandedoutcast/publish-nuget@v2.5.5
+      
+    - name: publish nuget package
+      uses: dansiegel/publish-nuget@2
       with:
-          PROJECT_FILE_PATH: ../Narojay.Tools.Core.csproj
-          NUGET_KEY: ${{secrets.NUGET_KEY}}
+       filename: '*.nupkg'
+       apiKey: ${{secrets.NUGET_KEY}}
+       feedUrl: 'https://api.nuget.org/v3/index.json'
+

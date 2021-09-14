@@ -18,7 +18,7 @@ jobs:
       run: dotnet restore
     - name: Build
       run: dotnet build --configuration Release --no-restore
-    - name aals
+    - name: aals
       run: ls
 #     - name: Publish nuget
 #       uses: brandedoutcast/publish-nuget@v2.5.2

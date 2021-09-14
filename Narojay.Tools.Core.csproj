@@ -6,7 +6,6 @@
       <Description>narojay's tools for you</Description>
       <PackageLicenseExpression>MIT</PackageLicenseExpression>
       <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-      <PackageIcon>ef9af790506f8ef9cafc8e92281c0d05f7f51ff4_full.jpg</PackageIcon>
       <PackageIconUrl />
       <Copyright>narojay</Copyright>
       <PackageProjectUrl>https://github.com/narojay/Narojay.Tools.Core</PackageProjectUrl>
@@ -17,10 +16,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="..\..\..\Desktop\ef9af790506f8ef9cafc8e92281c0d05f7f51ff4_full.jpg">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
   </ItemGroup>
 
 </Project>

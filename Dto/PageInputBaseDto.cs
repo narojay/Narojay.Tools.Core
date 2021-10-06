@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Narojay.Tools.Core.Dto
 {
+    /// <summary>
+    /// 分页基础入参
+    /// </summary>
     public class PageInputBaseDto
     {
         public int PageIndex { get; set; } = 1;

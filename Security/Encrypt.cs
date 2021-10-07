@@ -7,7 +7,7 @@ namespace Narojay.Tools.Core.Security
 {
     public static class Encrypt
     {
-        public static string Salt = "narojay";
+        private static string Salt = "narojay";
 
         public static string Md5Encrypt(string message)
         {

@@ -16,6 +16,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Narojay.Tools.Test\**" />
+    <EmbeddedResource Remove="Narojay.Tools.Test\**" />
+    <None Remove="Narojay.Tools.Test\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="System.Security.Cryptography.Algorithms" Version="4.3.1" />
   </ItemGroup>
 
